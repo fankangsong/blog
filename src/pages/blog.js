@@ -2,12 +2,13 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import '../styles/blog-list.css'
+import '../styles/blog.css'
 
 function Posts({ list }) {
+  console.log(list)
   return (
     <ul className="blog-list-container">
-      {list.map(({ node: { frontmatter, excerpt, id } }) => {
+      {list.map(({ node: { frontmatter, id } }) => {
         const { title, date, path } = frontmatter
         return (
           <li key={id}>
@@ -15,7 +16,6 @@ function Posts({ list }) {
               {title}
             </Link>
             <span className="date">{date}</span>
-            <p className="desc">{excerpt}</p>
           </li>
         )
       })}
