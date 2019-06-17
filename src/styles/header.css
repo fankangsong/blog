@@ -1,0 +1,29 @@
+.site-header {
+  padding: 20px;
+}
+
+.logo-link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px auto;
+  overflow: hidden;
+}
+
+.logo {
+  max-width: 100%;
+  border-radius: 50%;
+  padding: 1px;
+  border: 1px solid #f4d986;
+}
+
+.navigator {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.navigator > li {
+  display: inline-block;
+  margin: 0 6px;
+}
