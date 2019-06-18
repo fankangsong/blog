@@ -5,7 +5,6 @@ import SEO from '../components/seo'
 import '../styles/blog.css'
 
 function Posts({ list }) {
-  console.log(list)
   return (
     <ul className="blog-list-container">
       {list.map(({ node: { frontmatter, id } }) => {
@@ -31,6 +30,7 @@ export default function BlogIndexPage({
   return (
     <Layout>
       <SEO title="博客列表" />
+      <h2>博客</h2>
       <Posts list={edges} />
     </Layout>
   )

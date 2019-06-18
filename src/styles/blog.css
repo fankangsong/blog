@@ -1,6 +1,6 @@
 .blog-list-container {
-  max-width: 600px;
-  margin: 20px auto 0;
+  /* max-width: 600px; */
+  margin: 20px;
 }
 .blog-list-container .title {
   font-size: 18px;
@@ -9,12 +9,14 @@
 .blog-list-container .date {
   font-size: 12px;
   font-style: italic;
+  display: inline-block;
 }
 .blog-list-container .desc {
   font-size: 14px;
   font-style: italic;
   color: #555;
 }
+
 .blog-post-container {
   margin-top: 50px;
 }
@@ -22,7 +24,7 @@
   text-align: right;
 }
 .blog-post-content {
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 blockquote {
