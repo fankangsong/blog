@@ -1,53 +1,67 @@
 const chokidar = require('chokidar')
 const exec = require('child_process').exec
-const watchForlder = `${__dirname}/content/blog`
+const watchFile = `${__dirname}/content/config.json`
+const fs = require('fs')
+
+function getConfig() {
+  try {
+    const raw = fs.readFileSync('./content/config.json', 'utf-8')
+    const config = JSON.parse(raw)
+    return Promise.resolve(config)
+  } catch (err) {
+    Promise.resolve({ cmd: '' })
+  }
+}
+
+function task(cmd) {
+  return new Promise((resolve, reject) => {
+    let taskProcess = exec(cmd)
+
+    taskProcess.stdout.on('data', data => {
+      console.log(data)
+    })
+
+    taskProcess.stderr.on('data', err => {
+      console.log(err)
+    })
+
+    taskProcess.on('exit', code => {
+      if (code === 0) {
+        resolve()
+      } else {
+        reject(code)
+      }
+    })
+  })
+}
 
 let isRunning = false
 
-function run(path) {
+async function run(cmd) {
   if (isRunning) return
 
-  console.log('incoming', path)
-  const buildProcess = exec('npm run build')
-  isRunning = true
-
-  buildProcess.stdout.on('data', data => {
-    console.log('stdout:', data)
-  })
-
-  buildProcess.stderr.on('data', err => {
-    console.log('stderr:', err)
+  try {
+    isRunning = true
+    await task(cmd)
     isRunning = false
-  })
-
-  buildProcess.on('exit', code => {
-    console.log('exec exited: ', code)
+    return Promise.resolve()
+  } catch (err) {
     isRunning = false
-  })
+    console.error('[run error]: ', err)
+  }
 }
 
-const options = {
-  ignored: /(^|[\/\\])\../,
-  depth: 5,
-}
 chokidar
-  .watch(watchForlder, options)
-  .on('add', path => {
-    console.log('add')
-    run(path)
+  .watch(watchFile, {
+    ignored: /(^|[\/\\])\../,
+    depth: 5,
   })
-  .on('unlink', path => {
-    console.log('unlink')
-    run(path)
-  })
-  .on('unlinkDir', path => {
-    console.log('unlinkDir')
-    run(path)
-  })
-  .on('change', path => {
-    console.log('change')
-    run(path)
-  })
-  .on('ready', path => {
-    console.log('raedy')
+  .on('all', async () => {
+    const { cmd } = await getConfig()
+    console.log('=======================')
+    console.log('[task start]:', new Date())
+    console.log('[task cmd]:', cmd)
+    await run(cmd)
+    console.log('[task end]:', new Date())
+    console.log('=======================')
   })
