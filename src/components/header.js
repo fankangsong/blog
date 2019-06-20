@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Avatar from './avatar'
 import '../styles/header.css'
-import logo from '../images/avatar.png'
 
 const Header = () => (
   <header className="site-header">
     <Link to={`/`} className="logo-link">
-      <img className="logo" src={logo} alt="" />
+      <Avatar />
     </Link>
 
     <ul className="navigator">
