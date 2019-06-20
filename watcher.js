@@ -1,6 +1,6 @@
 const chokidar = require('chokidar')
 const exec = require('child_process').exec
-const watchFile = `${__dirname}/content/config.json`
+const watchFile = `${__dirname}/content/blog/config.json`
 const fs = require('fs')
 
 function getConfig() {
