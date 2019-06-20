@@ -5,7 +5,7 @@ const fs = require('fs')
 
 function getConfig() {
   try {
-    const raw = fs.readFileSync('./content/config.json', 'utf-8')
+    const raw = fs.readFileSync('./content/blog/config.json', 'utf-8')
     const config = JSON.parse(raw)
     return Promise.resolve(config)
   } catch (err) {
