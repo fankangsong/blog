@@ -28,11 +28,7 @@ const Avatar = () => (
     `}
     render={data => (
       <Img
-        style={{
-          margin: `auto`,
-          borderRadius: `50%`,
-          border: `1px solid #ff990b`,
-        }}
+        className="avatar"
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}

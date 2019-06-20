@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import '../styles/blog.css'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -12,15 +11,13 @@ export default function Template({
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <p className="date">{frontmatter.date}</p>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
+      <div className="content">
+        <h1>{frontmatter.title}</h1>
+        <p className="date">{frontmatter.date}</p>
+        <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </Layout>
   )

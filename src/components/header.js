@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Avatar from './avatar'
-import '../styles/header.css'
 
 const Header = () => (
   <header className="site-header">
@@ -10,6 +9,9 @@ const Header = () => (
     </Link>
 
     <ul className="navigator">
+      <li>
+        <Link to={`/`}>Home</Link>
+      </li>
       <li>
         <Link to={`/blog`}>Blog</Link>
       </li>

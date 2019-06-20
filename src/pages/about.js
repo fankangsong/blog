@@ -8,7 +8,9 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO title="About" />
-      你好
+      <div className="content">
+
+      </div>
     </Layout>
   )
 }

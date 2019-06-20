@@ -2,11 +2,10 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import '../styles/blog.css'
 
 function Posts({ list }) {
   return (
-    <ul className="blog-list-container">
+    <ul className="blog-list">
       {list.map(({ node: { frontmatter, id } }) => {
         const { title, date, path } = frontmatter
         return (
@@ -30,8 +29,10 @@ export default function BlogIndexPage({
   return (
     <Layout>
       <SEO title="博客列表" />
-      <h2>博客</h2>
-      <Posts list={edges} />
+      <div className="content">
+        <h2>博客</h2>
+        <Posts list={edges} />
+      </div>
     </Layout>
   )
 }

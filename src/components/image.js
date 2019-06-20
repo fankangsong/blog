@@ -28,7 +28,9 @@ const Image = () => (
     `}
     render={data => (
       <Img
+        className="welcome"
         style={{ margin: `auto` }}
+        alt="一个很普通的中年男人"
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}
