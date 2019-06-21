@@ -18,7 +18,7 @@ import '../styles/default.css'
 const Layout = ({ title, props, children }) => {
   return (
     <>
-      <SEO title={title} lang="zh-cmn-Hans-CN" />
+      <SEO title={title} />
       <StaticQuery
         query={graphql`
           query SiteTitleQuery {
