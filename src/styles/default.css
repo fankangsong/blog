@@ -1,3 +1,53 @@
+/* Color Theme Swatches in Hex */
+.Retro-Fathers-Day-1-hex {
+  color: #62bd96;
+}
+.Retro-Fathers-Day-2-hex {
+  color: #f1e5c0;
+}
+.Retro-Fathers-Day-3-hex {
+  color: #f39342;
+}
+.Retro-Fathers-Day-4-hex {
+  color: #f15839;
+}
+.Retro-Fathers-Day-5-hex {
+  color: #f1543a;
+}
+
+/* Color Theme Swatches in RGBA */
+.Retro-Fathers-Day-1-rgba {
+  color: rgba(98, 188, 149, 1);
+}
+.Retro-Fathers-Day-2-rgba {
+  color: rgba(240, 228, 191, 1);
+}
+.Retro-Fathers-Day-3-rgba {
+  color: rgba(242, 147, 66, 1);
+}
+.Retro-Fathers-Day-4-rgba {
+  color: rgba(240, 87, 56, 1);
+}
+.Retro-Fathers-Day-5-rgba {
+  color: rgba(240, 84, 58, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.Retro-Fathers-Day-1-hsla {
+  color: hsla(154, 40, 56, 1);
+}
+.Retro-Fathers-Day-2-hsla {
+  color: hsla(45, 63, 84, 1);
+}
+.Retro-Fathers-Day-3-hsla {
+  color: hsla(27, 88, 60, 1);
+}
+.Retro-Fathers-Day-4-hsla {
+  color: hsla(10, 86, 58, 1);
+}
+.Retro-Fathers-Day-5-hsla {
+  color: hsla(8, 86, 58, 1);
+}
 a {
   color: #f15839;
   text-decoration: none;
@@ -5,8 +55,6 @@ a {
   touch-action: none;
 }
 a:hover {
-  /* text-decoration: underline #fa8080;
-  text-decoration-skip-ink: auto */
   border-bottom: 2px solid #fdbbbb;
 }
 
@@ -39,12 +87,18 @@ blockquote::before {
   margin-top: -30px;
   /* line-height: 0.3; */
 }
+pre,
+code {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  background-color: #333;
+  color: #fff;
+}
 
 /* module */
 .site-header,
 .site-footer {
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-size: 0.875em;
+  font-size: 14px;
 }
 .site-header {
   padding: 20px 0;
@@ -113,7 +167,7 @@ blockquote::before {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
   z-index: 0;
-  line-height: 1;
+  /* line-height: 1; */
 }
 .site-footer::after {
   content: '';
@@ -138,8 +192,12 @@ blockquote::before {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .site-footer .icon {
-  vertical-align: middle;
-  margin: 0 6px;
+  margin: 0 5px;
+  position: relative;
+  top: 3px;
+  /* vertical-align: middle; */
+  /* margin: -1px 6px; */
+  /* line-height: 1; */
 }
 
 .welcome {
