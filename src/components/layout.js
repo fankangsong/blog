@@ -11,11 +11,10 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Footer from './footer'
-import '../styles/layout.css'
+import '../styles/type.css'
 import '../styles/default.css'
 
 const Layout = ({ props, children }) => {
-  console.log(props)
   return (
     <StaticQuery
       query={graphql`
@@ -28,7 +27,7 @@ const Layout = ({ props, children }) => {
         }
       `}
       render={data => (
-        <>
+        <div className="type">
           <Header siteTitle={data.site.siteMetadata.title} />
           <div
             style={{
@@ -39,7 +38,7 @@ const Layout = ({ props, children }) => {
             <main>{children}</main>
             <Footer />
           </div>
-        </>
+        </div>
       )}
     />
   )

@@ -7,14 +7,12 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO title="关于" />
-      <div className="content">
-        <div
-          style={{
-            textAlign: `center`,
-          }}
-        >
-          <Image />
-        </div>
+      <div
+        style={{
+          textAlign: `center`,
+        }}
+      >
+        <Image />
       </div>
     </Layout>
   )

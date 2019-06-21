@@ -8,7 +8,7 @@ const Header = () => (
       <Avatar />
     </Link>
 
-    <ul className="navigator">
+    <ul className="navigator sans-serif">
       <li>
         <Link to={`/`}>Home</Link>
       </li>

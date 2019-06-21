@@ -1,0 +1,50 @@
+/* Color Theme Swatches in Hex */
+.Retro-Fathers-Day-1-hex {
+  color: #62bd96;
+}
+.Retro-Fathers-Day-2-hex {
+  color: #f1e5c0;
+}
+.Retro-Fathers-Day-3-hex {
+  color: #f39342;
+}
+.Retro-Fathers-Day-4-hex {
+  color: #f15839;
+}
+.Retro-Fathers-Day-5-hex {
+  color: #f1543a;
+}
+
+/* Color Theme Swatches in RGBA */
+.Retro-Fathers-Day-1-rgba {
+  color: rgba(98, 188, 149, 1);
+}
+.Retro-Fathers-Day-2-rgba {
+  color: rgba(240, 228, 191, 1);
+}
+.Retro-Fathers-Day-3-rgba {
+  color: rgba(242, 147, 66, 1);
+}
+.Retro-Fathers-Day-4-rgba {
+  color: rgba(240, 87, 56, 1);
+}
+.Retro-Fathers-Day-5-rgba {
+  color: rgba(240, 84, 58, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.Retro-Fathers-Day-1-hsla {
+  color: hsla(154, 40, 56, 1);
+}
+.Retro-Fathers-Day-2-hsla {
+  color: hsla(45, 63, 84, 1);
+}
+.Retro-Fathers-Day-3-hsla {
+  color: hsla(27, 88, 60, 1);
+}
+.Retro-Fathers-Day-4-hsla {
+  color: hsla(10, 86, 58, 1);
+}
+.Retro-Fathers-Day-5-hsla {
+  color: hsla(8, 86, 58, 1);
+}
