@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 
 function Posts({ list }) {
   return (
@@ -27,8 +26,7 @@ export default function BlogIndexPage({
   },
 }) {
   return (
-    <Layout>
-      <SEO title="博客列表" />
+    <Layout title="博客列表">
       <div className="content">
         <h2>博客</h2>
         <Posts list={edges} />

@@ -11,36 +11,40 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Footer from './footer'
+import SEO from './seo'
 import '../styles/type.css'
 import '../styles/default.css'
 
-const Layout = ({ props, children }) => {
+const Layout = ({ title, props, children }) => {
   return (
-    <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
+    <>
+      <SEO title={title} lang="zh-cmn-Hans-CN" />
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+              }
             }
           }
-        }
-      `}
-      render={data => (
-        <div className="type">
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <div
-            style={{
-              margin: `0 auto`,
-              paddingTop: 0,
-            }}
-          >
-            <main>{children}</main>
-            <Footer />
+        `}
+        render={data => (
+          <div className="type">
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <div
+              style={{
+                margin: `0 auto`,
+                paddingTop: 0,
+              }}
+            >
+              <main>{children}</main>
+              <Footer />
+            </div>
           </div>
-        </div>
-      )}
-    />
+        )}
+      />
+    </>
   )
 }
 

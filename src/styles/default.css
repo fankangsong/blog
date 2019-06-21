@@ -29,9 +29,12 @@ h6 {
 }
 body {
   /* font-family: Georgia, serif; */
-  font-family: Georgia, 'Times New Roman', Times, serif,
-    'Hiragino Kaku Gothic Pro', 'STXihei', Hei, SimSun;
+  /* font-family: Georgia, 'Times New Roman', Times, serif, */
+  /* 'Hiragino Kaku Gothic Pro', 'STXihei', Hei, SimSun; */
   background-color: #fff;
+}
+body:lang(zh) {
+  font-family: 'Source Han Serif', Georgia, serif;
 }
 blockquote {
   background-color: rgba(240, 228, 191, 0.2);
@@ -52,8 +55,12 @@ pre,
 code {
   background-color: #333;
   color: #fff;
-  padding: 2px 4px;
+  padding: 3px 4px;
   border-radius: 3px;
+  font-size: 14px;
+}
+code {
+  margin: 0 2px;
 }
 
 /* module */

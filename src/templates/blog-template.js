@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -9,8 +8,7 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
-      <SEO title={frontmatter.title} />
+    <Layout title={frontmatter.title}>
       <div className="content blog">
         <h1 className="title">{frontmatter.title}</h1>
         <p className="date">{frontmatter.date}</p>
