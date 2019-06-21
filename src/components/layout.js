@@ -14,33 +14,36 @@ import Footer from './footer'
 import '../styles/layout.css'
 import '../styles/default.css'
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+const Layout = ({ props, children }) => {
+  console.log(props)
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <Footer />
-        </div>
-      </>
-    )}
-  />
-)
+      `}
+      render={data => (
+        <>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <div
+            style={{
+              margin: `0 auto`,
+              paddingTop: 0,
+            }}
+          >
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </>
+      )}
+    />
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

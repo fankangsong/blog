@@ -1,15 +1,20 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Image from '../components/image'
 
 const AboutPage = () => {
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="关于" />
       <div className="content">
-
+        <div
+          style={{
+            textAlign: `center`,
+          }}
+        >
+          <Image />
+        </div>
       </div>
     </Layout>
   )
