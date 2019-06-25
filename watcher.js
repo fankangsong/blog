@@ -7,7 +7,7 @@ function getCmd() {
   try {
     const raw = fs.readFileSync('./content/blog/cmd.txt', 'utf-8')
     console.log(`[info] raw: `, raw)
-    const [cmd] = raw.split('|')
+    const [cmd] = raw.split('.')
     return Promise.resolve(cmd)
   } catch (err) {
     console.error(err)
@@ -61,6 +61,7 @@ chokidar
   })
   .on('all', async () => {
     const cmd = await getCmd()
+    return
     if (!cmd) {
       console.log(`[cmd is empty.]`)
       return
