@@ -74,11 +74,16 @@ chokidar
       console.log(`[cmd is empty.]`)
       return
     }
-    console.log('=======================')
-    console.log('[task start]:', new Date())
-    console.log('[task cmd]:', cmd)
-    await run(cmd)
-    console.log('[task end]:', new Date())
-    console.log('=======================')
-    notify(`blog has rebuild on ${new Date()}`)
+
+    try {
+      console.log('=======================')
+      console.log('[task start]:', new Date())
+      console.log('[task cmd]:', cmd)
+      await run(cmd)
+      console.log('[task end]:', new Date())
+      console.log('=======================')
+      notify(`blog has rebuild on ${new Date()}`)
+    } catch (err) {
+      notify(`blog build error ${new Date()}`)
+    }
   })
