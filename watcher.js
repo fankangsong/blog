@@ -2,6 +2,17 @@ const chokidar = require('chokidar')
 const exec = require('child_process').exec
 const watchFile = `${__dirname}/content/blog/cmd.txt`
 const fs = require('fs')
+const axios = require('axios')
+
+const NOTIFY_URL =
+  'https://api.telegram.org/bot856620244:AAFAJndCWwtMx-XBMidn1r7JdhEntkPBq-A/sendMessage'
+
+async function notify(msg) {
+  return axios.post(NOTIFY_URL, {
+    chat_id: '475290138',
+    text: msg,
+  })
+}
 
 function getCmd() {
   try {
@@ -61,7 +72,6 @@ chokidar
   })
   .on('all', async () => {
     const cmd = await getCmd()
-    return
     if (!cmd) {
       console.log(`[cmd is empty.]`)
       return
@@ -72,4 +82,5 @@ chokidar
     await run(cmd)
     console.log('[task end]:', new Date())
     console.log('=======================')
+    notify(`blog has rebuild on ${new Date()}`)
   })
