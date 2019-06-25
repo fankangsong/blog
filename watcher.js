@@ -1,15 +1,17 @@
 const chokidar = require('chokidar')
 const exec = require('child_process').exec
-const watchFile = `${__dirname}/content/blog/config.json`
+const watchFile = `${__dirname}/content/blog/cmd.txt`
 const fs = require('fs')
 
-function getConfig() {
+function getCmd() {
   try {
-    const raw = fs.readFileSync('./content/blog/config.json', 'utf-8')
-    const config = JSON.parse(raw)
-    return Promise.resolve(config)
+    const raw = fs.readFileSync('./content/blog/cmd.txt', 'utf-8')
+    console.log(`[info] raw: `, raw)
+    const [cmd] = raw.split(',')
+    return Promise.resolve(cmd)
   } catch (err) {
-    Promise.resolve({ cmd: '' })
+    console.error(err)
+    Promise.resolve('')
   }
 }
 
@@ -42,6 +44,7 @@ async function run(cmd) {
 
   try {
     isRunning = true
+    await task('rm -rf .cache')
     await task(cmd)
     isRunning = false
     return Promise.resolve()
@@ -57,7 +60,11 @@ chokidar
     depth: 5,
   })
   .on('all', async () => {
-    const { cmd } = await getConfig()
+    const cmd = await getCmd()
+    if (!cmd) {
+      console.log(`[cmd is empty.]`)
+      return
+    }
     console.log('=======================')
     console.log('[task start]:', new Date())
     console.log('[task cmd]:', cmd)
