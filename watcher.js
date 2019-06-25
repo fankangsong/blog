@@ -19,7 +19,7 @@ function getCmd() {
     const [cmd] = raw.split('.')
     return Promise.resolve(cmd)
   } catch (err) {
-    console.error(err)
+    console.error('[error]', err)
     Promise.resolve('')
   }
 }
@@ -60,6 +60,7 @@ async function run(cmd) {
   } catch (err) {
     isRunning = false
     console.error('[run error]: ', err)
+    return Promise.reject(err)
   }
 }
 
@@ -82,7 +83,7 @@ chokidar
       await run(cmd)
       console.log('[task end]:', new Date())
       console.log('=======================')
-      notify(`blog has rebuild on ${new Date()}`)
+      notify(`published blog on ${new Date()}`)
     } catch (err) {
       notify(`blog build error ${new Date()}`)
     }
