@@ -70,3 +70,4 @@ yarn-error.log
 
 public
 content/blog
+/config.js
