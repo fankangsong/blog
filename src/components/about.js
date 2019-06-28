@@ -29,7 +29,7 @@ const About = () => (
     render={data => (
       <Img
         alt="一个很普通的中年男人"
-        style={{ margin: `auto`, maxWidth: 800 }}
+        style={{ margin: `auto`, maxWidth: 400 }}
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}

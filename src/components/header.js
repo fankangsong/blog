@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Avatar from './avatar'
 
 const Header = () => (
-  <header className="site-header">
+  <header className="site-header sans-serif">
     <Link to={`/`} className="logo-link">
       <Avatar />
     </Link>

@@ -1,225 +1,74 @@
 ::selection {
-  background-color: rgb(255, 225, 80);
+  background-color: rgb(255, 225, 80, 0.5);
 }
 body {
-  line-height: 1.8;
-  background-color: #fff;
+  font-family: 'Biaodian Pro Serif GB', 'Numeral LF Serif', Georgia,
+    'Times New Roman', 'Han Songti GB', serif;
+  line-height: 1.7;
 }
-body:lang(zh) {
-  font-family: 'Source Han Serif', Georgia, serif;
+a {
+  text-decoration: underline;
+  text-underline-position: under;
+  transition: all 0.3s;
 }
-a:link {
-  color: rgba(240, 84, 58, 1);
-  text-decoration: none
+a:link,
+a:visited {
+  color: #f05037;
 }
 a:visited {
-  color: rgba(240, 84, 58, 0.4)
-}
-a:active {
-  color: rgba(240, 84, 58, 0.6)
+  color: #f05037;
 }
 a:hover {
   text-decoration: underline;
-  text-underline-position: under;
 }
-
-code,
-pre {
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
-    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-}
-mark {
-  background-color: rgb(255, 225, 80, .2)
-
-}
-u {
-  border-bottom: 1px solid #333;
+.code {
+  font-family: Menlo, Consolas, Courier, 'Han Heiti', monospace, monospace,
+    sans-serif;
 }
 .sans-serif {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Romanization Sans', 'Helvetica Neue', Helvetica, Arial,
+    'Han Heiti', sans-serif;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  font-family: 'Linux Libertine', Baskerville, Georgia, 'Liberation Serif',
-    'Kaiti SC', STKaiti, 'AR PL UKai CN', 'AR PL UKai HK', 'AR PL UKai TW',
-    'AR PL UKai TW MBE', 'AR PL KaitiM GB', KaiTi, KaiTi_GB2312, 'TW-Kai', serif;
-}
-blockquote {
-  
-  background-color: rgb(255, 225, 80, .2);
-  border-radius: 3px;
-}
-blockquote::before {
-  content: '\201C';
-  /* display: block; */
-  transform: scale(2);
-  text-transform: uppercase;
-  
-  /* height: 30px;
-  font-size: 60px;
-  line-height: 60px;
-  color: #333;
-  margin-top: -30px; */
+em {
+  background-color: rgba(255, 240, 80, 0.5);
 }
 pre,
 code {
-  background-color: #333;
-  color: #fff;
-  padding: 3px 4px;
+  color: #62bd96;
+}
+kbd {
+  display: inline-block;
+  padding: 0.25em 0.5em 0.2em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  font: 75%/1 monaco, menlo, consolas, 'courier new', courier, monospace;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
   border-radius: 3px;
-  font-size: 14px;
-}
-code {
-  margin: 0 2px;
-}
-
-/* --------------------------------------------------------------------------
- 弯引号「“‘’”」（Curve quotes）
- -------------------------------------------------------------------------- */
- @font-face {
-  font-family: 'type';
-  unicode-range: U+201C-201D, U+2018-2019;
-  src: local('Hiragino Sans GB'), local('Heiti SC'), local(STHeiti),
-    local(SimSun), local(PMingLiU);
-}
-
-/* module */
-.site-header,
-.site-footer {
-  font-size: 14px;
-}
-.site-header {
-  padding: 20px 0;
-}
-
-.logo-link {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-.logo-link:hover {
-  border: none;
-  transform: rotate(-4deg);
-}
-
-.avatar {
-  max-width: 100%;
-  border-radius: 50%;
-  padding: 1px;
-  border: 1px solid #f4d986;
-}
-
-.navigator {
-  margin: 10px 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-.navigator > li {
-  display: inline-block;
-  margin: 0 10px;
-  position: relative;
-  z-index: 2;
-}
-.navigator li:after {
-  content: '';
-  position: absolute;
-  top: 6px;
-  right: -10px;
-  bottom: 0;
-  left: 4px;
-  background-color: #fef0b8;
-  z-index: 0;
-  transform: rotate(-2deg);
-  transition: background-color 0.2s;
-}
-.navigator a {
-  position: relative;
-  z-index: 3;
-  font-size: 16px;
-}
-.navigator a:hover {
-  text-decoration: none;
-}
-
-/* footer */
-.site-footer {
-  max-width: 60%;
-  margin: 100px auto 0;
-  padding: 20px 0 20px 0;
-  text-align: center;
-  font-size: 14px;
-  color: #999;
-  position: relative;
-  z-index: 0;
-  /* line-height: 1; */
-}
-.site-footer::after {
-  content: '';
-  display: block;
-  height: 1px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  background: #c6ffdd; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f7797d,
-    #fbd786,
-    #c6ffdd
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f7797d,
-    #fbd786,
-    #c6ffdd
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.site-footer .icon {
-  margin: 0 5px;
-  position: relative;
-  top: 3px;
-}
-
-.welcome {
-  max-width: 600px;
-}
-
-/* blog */
-.content {
-  margin: auto;
-  max-width: 800px;
-  width: 90%;
-  font-size: 18px;
-}
-
-.blog-list {
-  list-style: none;
-}
-.blog-list .date {
-  display: inline-block;
-  margin-left: 1em;
-  color: #999;
-  font-size: 0.8em;
-}
-.blog {
-  padding-top: 20px;
-}
-.blog .date {
-  text-align: right;
-  color: #999;
-}
-.blog-post-content img {
-  width: 100%;
-  max-width: 100%;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-transform: capitalize;
+  /* 首字母大写 */
+  color: #555;
+  background-color: #fefefe;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.05)),
+    to(transparent)
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.05),
+    transparent
+  );
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    transparent
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0d000000', endColorstr='#00000000', GradientType=0);
+  -webkit-box-shadow: 0 2px 0 #ccc, 0 3px 1px #999, inset 0 1px 1px #fff;
+  box-shadow: 0 2px 0 #ccc, 0 3px 1px #999, inset 0 1px 1px #fff;
 }
