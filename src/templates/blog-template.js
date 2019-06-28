@@ -10,7 +10,7 @@ export default function Template({
   return (
     <Layout title={frontmatter.title}>
       <div className="content blog">
-        <h1 className="title">{frontmatter.title}</h1>
+        <h1 className="title ">{frontmatter.title}</h1>
         <p className="date">{frontmatter.date}</p>
         <div
           className="blog-post-content"

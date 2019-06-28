@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
-import '../styles/type.css'
+import '../styles/normalize.css'
 import '../styles/default.css'
 
 const Layout = ({ title, props, children }) => {
@@ -32,12 +32,7 @@ const Layout = ({ title, props, children }) => {
         render={data => (
           <div className="type">
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div
-              style={{
-                margin: `0 auto`,
-                paddingTop: 0,
-              }}
-            >
+            <div>
               <main>{children}</main>
               <Footer />
             </div>
