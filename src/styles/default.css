@@ -36,6 +36,11 @@ pre,
 code {
   color: #62bd96;
 }
+blockquote {
+  border-left: 4px solid #f6f6f6;
+  padding-left: .25em;
+  color: #666;
+}
 kbd {
   display: inline-block;
   padding: 0.25em 0.5em 0.2em;
