@@ -36,6 +36,9 @@ pre,
 code {
   color: #62bd96;
 }
+code {
+  padding: 0 .25em;
+}
 blockquote {
   border-left: 4px solid #f6f6f6;
   padding-left: .25em;
