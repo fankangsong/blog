@@ -2,8 +2,8 @@
   background-color: rgb(255, 225, 80, 0.5);
 }
 body {
-  font-family: 'Biaodian Pro Serif GB', 'Numeral LF Serif', 'Microsoft Yahei', Georgia,
-    'Times New Roman', 'Han Songti GB', serif;
+  font-family: 'Biaodian Pro Serif GB', 'Numeral LF Serif', 'Microsoft Yahei',
+    Georgia, 'Times New Roman', 'Han Songti GB', serif;
   line-height: 1.7;
 }
 a {
@@ -29,21 +29,36 @@ a:hover {
   font-family: 'Romanization Sans', 'Helvetica Neue', Helvetica, Arial,
     'Han Heiti', sans-serif;
 }
-em {
+/* em {
   background-color: rgba(255, 240, 80, 0.5);
-}
+} */
 pre,
 code {
   color: #62bd96;
 }
 code {
-  padding: 0 .25em;
+  padding: 0 0.25em;
 }
 blockquote {
-  border-left: 4px solid #f6f6f6;
-  padding-left: .25em;
+  /* border-left: 3px solid #ccc; */
+  /* padding-left: 0.25em; */
+  /* border-radius: 6px; */
+  position: relative;
+}
+blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: 2px;
+  left: -36px;
+  display: block;
+  font-size: 60px;
+  line-height: 60px;
   color: #666;
 }
+/* blockquote > *:first-child {
+  margin-top: 0;
+  padding-top: 0;
+} */
 kbd {
   display: inline-block;
   padding: 0.25em 0.5em 0.2em;
