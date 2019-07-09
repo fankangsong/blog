@@ -44,21 +44,24 @@ blockquote {
   /* padding-left: 0.25em; */
   /* border-radius: 6px; */
   position: relative;
+  margin-left: 3em;
 }
 blockquote::before {
-  content: '\201C';
+  content: "\201C";
+  display: inline-block;
+  color: transparent;
+  width: 2em;
+  height: 2em;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M23.105 55.627c-.005.138-.021.273-.021.413 0 .047.006.092.007.138-.001.092-.007.183-.007.275l.02-.014c.212 6.166 5.265 11.103 11.482 11.103 6.352 0 11.502-5.149 11.502-11.502 0-5.796-4.292-10.577-9.869-11.372 1.386-4.595 5.645-7.938 10.695-7.938v-4.106c-12.893.001-23.373 10.217-23.809 23.003zM52.941 55.627c-.005.138-.021.273-.021.413 0 .047.007.092.007.138-.001.092-.007.183-.007.275l.021-.014c.212 6.166 5.265 11.103 11.481 11.103 6.353 0 11.502-5.149 11.502-11.502 0-5.796-4.292-10.577-9.869-11.372 1.386-4.595 5.645-7.938 10.694-7.938v-4.106c-12.893.001-23.371 10.217-23.808 23.003z"/></svg>') no-repeat 0 0;
+  background-size: 100%;
   position: absolute;
-  top: 2px;
-  left: -36px;
-  display: block;
-  font-size: 60px;
-  line-height: 60px;
-  color: #666;
+  top: 0;
+  left: -2em;
 }
-/* blockquote > *:first-child {
+blockquote > *:first-child {
   margin-top: 0;
   padding-top: 0;
-} */
+}
 kbd {
   display: inline-block;
   padding: 0.25em 0.5em 0.2em;
