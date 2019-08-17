@@ -115,12 +115,12 @@
   width: 100%;
   max-width: 100%;
 }
-.blog-post-content p {
-  /* text-indent: 2em; */
-}
 .pictures img {
   display: block;
 }
-.pictures {
-  border: 6px solid #f4d986;
+
+.google-map {
+  max-width: 800px;
+  width: 100%;
+  height: 480px;
 }

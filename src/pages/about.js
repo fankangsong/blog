@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/layout'
-import AboutImg from '../components/about'
 
 const AboutPage = () => {
   return (
@@ -10,7 +9,11 @@ const AboutPage = () => {
           textAlign: `center`,
         }}
       >
-        <AboutImg />
+        <iframe
+          className="google-map"
+          src="https://www.google.com/maps/d/embed?mid=1ITNU4y9FSrODmHp-Kt6CTbt7uA0"
+          frameBorder="0"
+        ></iframe>
       </div>
     </Layout>
   )
