@@ -1,14 +1,12 @@
 import React from 'react'
 import Layout from '../components/layout'
-import HomeImg from '../components/home'
-import AboutImg from '../components/about'
 
 function IndexPage(props) {
   return (
-    <Layout props={props}>
-      <AboutImg />
-      <p></p>
-      <HomeImg />
+    <Layout props={props} title="首页">
+      <div className="content">
+        <p>这个家伙太懒了，什么都没留下。</p>
+      </div>
     </Layout>
   )
 }

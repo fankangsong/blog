@@ -10,13 +10,13 @@ const Header = () => (
 
     <ul className="navigator sans-serif">
       <li>
-        <Link to={`/`}>Home</Link>
+        <Link to={`/`}>首页</Link>
       </li>
       <li>
-        <Link to={`/blog`}>Blog</Link>
+        <Link to={`/blog`}>文章</Link>
       </li>
       <li>
-        <Link to={`/about`}>About</Link>
+        <Link to={`/about`}>站长</Link>
       </li>
     </ul>
   </header>

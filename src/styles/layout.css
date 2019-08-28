@@ -27,6 +27,7 @@
 }
 
 .navigator {
+  height: 30px;
   margin: 10px 0;
   padding: 0;
   list-style: none;
@@ -38,7 +39,7 @@
   position: relative;
   z-index: 2;
 }
-.navigator li:after {
+.navigator li::after {
   content: '';
   position: absolute;
   top: 6px;
@@ -47,10 +48,11 @@
   left: 4px;
   background-color: #fef0b8;
   z-index: 0;
-  transform: rotate(-2deg);
-  transition: background-color 0.2s;
+  transform: rotate(-4deg);
+  transition: all 0.2s;
 }
 .navigator a {
+  padding: 2px 8px;
   position: relative;
   z-index: 3;
   font-size: 16px;
@@ -58,6 +60,9 @@
 }
 .navigator a:hover {
   text-decoration: none;
+}
+.navigator li:hover::after {
+  background-color: #fae48c;
 }
 
 /* footer */
@@ -120,7 +125,12 @@
 }
 
 .google-map {
+  display: none;
   max-width: 800px;
   width: 100%;
   height: 480px;
+  margin: auto;
+}
+.google-map.done {
+  display: block;
 }
