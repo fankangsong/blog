@@ -16,10 +16,14 @@ const AboutPage = () => {
       lastStatus.current = currentStatus
     }
 
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       if (lastStatus.current === 1) return
       setStatus(2)
     }, 10000)
+
+    return () => {
+      clearTimeout(timer)
+    }
   }, [])
 
   return (
@@ -41,6 +45,7 @@ const AboutPage = () => {
           </p>
         )}
         <iframe
+          title="google maps"
           id="google-map"
           className="google-map"
           src="https://www.google.com/maps/d/embed?mid=1ITNU4y9FSrODmHp-Kt6CTbt7uA0"
