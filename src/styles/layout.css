@@ -93,6 +93,17 @@
 .blog-list {
   /* list-style: none; */
 }
+.blog-list::after {
+  content: '';
+  display: block;
+  background-color: rgba(255, 38, 0, 0.2);
+  width: 200%;
+  height: 60%;
+  position: absolute;
+  right: -20%;
+  bottom: -200px;
+  transform: rotate(-10deg);
+}
 .blog-list a {
   text-decoration: none;
 }
@@ -142,4 +153,10 @@
   padding: 2px 6px;
   display: inline-block;
   transform: rotate(-4deg);
+}
+
+.design h2 {
+  line-height: 1;
+  padding-left: 10px;
+  border-left: 10px solid #000;
 }

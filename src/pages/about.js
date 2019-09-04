@@ -28,11 +28,14 @@ const AboutPage = () => {
 
   return (
     <Layout title="关于">
-      <div className="content">
+      <div className="content design">
         <h2>我和女儿</h2>
         <AboutImg />
+        <p>&nbsp;</p>
         <h2>#社畜#</h2>
+        <p>&nbsp;</p>
         <HomeImg />
+        <p>&nbsp;</p>
         <h2>我去过的地方...</h2>
         {status === 0 && (
           <p className="sans-serif" style={{ fontSize: '14px' }}>

@@ -29,7 +29,6 @@ const Home = () => (
     render={data => (
       <Img
         className="pictures"
-        style={{ margin: `auto`, maxWidth: 600 }}
         fluid={data.placeholderImage.childImageSharp.fluid}
       />
     )}
