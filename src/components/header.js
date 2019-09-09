@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Avatar from './avatar'
+import Avatar from './images/avatar'
 
 const Header = () => (
   <header className="site-header sans-serif">

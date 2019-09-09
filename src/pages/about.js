@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Layout from '../components/layout'
-import HomeImg from '../components/home'
-import AboutImg from '../components/about'
+import HomeImg from '../components/images/home'
+import AboutImg from '../components/images/about'
 
 const AboutPage = () => {
   const [status, setStatus] = useState(0)
