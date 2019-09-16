@@ -3,12 +3,12 @@ import { Link } from 'gatsby'
 import Avatar from './images/avatar'
 
 const Header = () => (
-  <header className="site-header sans-serif">
+  <header className="site-header">
     <Link to={`/`} className="logo-link">
       <Avatar />
     </Link>
 
-    <ul className="navigator sans-serif">
+    <ul className="navigator">
       <li>
         <Link to={`/`}>首页</Link>
       </li>
