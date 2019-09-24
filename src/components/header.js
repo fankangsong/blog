@@ -16,7 +16,7 @@ const Header = () => (
         <Link to={`/blog`}>博客</Link>
       </li>
       <li>
-        <Link to={`/about`}>站长</Link>
+        <Link to={`/about`}>关于</Link>
       </li>
     </ul>
   </header>
