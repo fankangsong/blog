@@ -32,6 +32,12 @@ a:hover {
 /* em {
   background-color: rgba(255, 240, 80, 0.5);
 } */
+pre {
+  font-size: 13px;
+  background-color: #0f111a;
+  padding: 6px;
+  border-radius: 3px;
+}
 pre,
 code {
   color: #62bd96;

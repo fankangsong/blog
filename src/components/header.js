@@ -13,7 +13,7 @@ const Header = () => (
         <Link to={`/`}>首页</Link>
       </li>
       <li>
-        <Link to={`/blog`}>文章</Link>
+        <Link to={`/blog`}>博客</Link>
       </li>
       <li>
         <Link to={`/about`}>站长</Link>

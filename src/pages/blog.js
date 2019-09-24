@@ -26,9 +26,9 @@ export default function BlogIndexPage({
   },
 }) {
   return (
-    <Layout title="博客列表">
+    <Layout title="博客">
       <div className="content design">
-        <h2>博客</h2>
+        {/* <h2>文章</h2> */}
         <Posts list={edges} />
       </div>
     </Layout>
