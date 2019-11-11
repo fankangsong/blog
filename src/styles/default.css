@@ -116,3 +116,16 @@ hr {
   border-color: #ddd;
   border-style: solid;
 }
+
+@media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: #000;
+  }
+  body {
+    background-color: #333;
+    color: rgb(184, 184, 184);
+  }
+  .navigator a::after {
+    border: none;
+  }
+}
