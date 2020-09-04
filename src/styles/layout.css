@@ -5,7 +5,9 @@
 .site-header {
   padding: 20px 0;
 }
-
+.main {
+  min-height: 60vh;
+}
 .logo-link {
   display: block;
   width: 50px;
