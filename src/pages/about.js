@@ -44,7 +44,7 @@ const AboutPage = () => {
         )}
         {status === 2 && (
           <p className="sans-serif" style={{ fontSize: '14px' }}>
-            你没翻墙吧？我去过的地方你看不到
+            网络错误，请尝试越过 GFW。
           </p>
         )}
         <iframe
