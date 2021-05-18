@@ -7,12 +7,12 @@ const Footer = () => {
     <footer className="site-footer code">
       <img
         src={Icon}
-        alt="imfer.me"
+        alt="imcolin.fan"
         className="icon"
         style={{ width: 16, height: 16 }}
       />
       <span className="copyright">&copy; {fullyear} </span>
-      <span>imfer.me</span>
+      <span>imcolin.fan</span>
     </footer>
   )
 }
