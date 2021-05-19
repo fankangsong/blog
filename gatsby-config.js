@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `imfer.me`,
-    description: `fer 的个人网站`,
+    title: `imcolin.fan`,
+    description: `Colin 的个人网站`,
     author: `@fankangsong`,
-    siteUrl: `https://imfer.me`,
+    siteUrl: `https://imcolinfan`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
