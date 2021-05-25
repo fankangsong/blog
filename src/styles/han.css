@@ -1,3 +1,4 @@
+/* eslint-disable */
 @charset "UTF-8";
 
 html {
@@ -220,9 +221,9 @@ em:lang(ja) {
   -moz-text-emphasis: filled circle;
   -webkit-text-emphasis: filled circle;
   text-emphasis: filled circle;
-  -moz-text-emphasis-position: under;
-  -webkit-text-emphasis-position: under;
-  text-emphasis-position: under;
+  -moz-text-emphasis-position: under left;
+  -webkit-text-emphasis-position: under left;
+  text-emphasis-position: under left;
   font-style: inherit;
   border-bottom: 2px dotted;
   padding-bottom: 0.05em;
@@ -233,9 +234,9 @@ em:lang(ja) {
   -moz-text-emphasis: filled sesame;
   -webkit-text-emphasis: filled sesame;
   text-emphasis: filled sesame;
-  -moz-text-emphasis-position: over;
-  -webkit-text-emphasis-position: over;
-  text-emphasis-position: over;
+  -moz-text-emphasis-position: over right;
+  -webkit-text-emphasis-position: over right;
+  text-emphasis-position: over right;
 }
 dfn:lang(zh),
 dfn:lang(ja) {

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `imcolin.fan`,
     description: `Colin 的个人网站`,
-    author: `@fankangsong`,
+    author: `@Colin`,
     siteUrl: `https://imcolinfan`,
   },
   plugins: [
@@ -16,18 +16,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `imfer.me`,
-        start_url: `/`,
-        background_color: `#f39342`,
-        theme_color: `#f39342`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.svg`, // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `gatsby-starter-default`,
+    //     short_name: `imcolin.fan`,
+    //     start_url: `/`,
+    //     background_color: `#f39342`,
+    //     theme_color: `#f39342`,
+    //     display: `minimal-ui`,
+    //     icon: `src/images/icon.svg`, // This path is relative to the root of the site.
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
