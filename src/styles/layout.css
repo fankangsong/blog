@@ -21,6 +21,13 @@
   transform: rotate(-4deg);
 }
 
+.logo-link img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f4d986;
+}
+
 .avatar {
   max-width: 100%;
   border-radius: 50%;
@@ -85,6 +92,9 @@
   max-width: 800px;
   width: 90%;
   font-size: 18px;
+}
+.content img {
+  max-width: 100%;
 }
 
 .blog-list {

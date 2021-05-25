@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Layout from '../components/layout'
-import HomeImg from '../components/images/home'
-import AboutImg from '../components/images/about'
+import ImageAbout from '../images/about.png';
+import ImageHome from '../images/home.jpg';
 
 const AboutPage = () => {
   const [status, setStatus] = useState(0)
@@ -30,11 +30,11 @@ const AboutPage = () => {
     <Layout title="关于">
       <div className="content design">
         <h2>我和女儿</h2>
-        <AboutImg />
+        <img src={ImageAbout} alt="about" />
         <p>&nbsp;</p>
         <h2>#社畜#</h2>
         <p>&nbsp;</p>
-        <HomeImg />
+        <img src={ImageHome} alt="me" />
         <p>&nbsp;</p>
         <h2>我去过的地方...</h2>
         {status === 0 && (

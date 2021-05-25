@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Avatar from './images/avatar'
+import AvatarImage from '../images/avatar.jpg';
 
 const Header = () => (
   <header className="site-header">
     <Link to={`/`} className="logo-link">
-      <Avatar />
+      <img src={AvatarImage} alt="Colin" />
     </Link>
 
     <ul className="navigator">
