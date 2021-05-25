@@ -7,6 +7,7 @@ function IndexPage(props) {
       <div className="content home">
         <p>&nbsp;</p>
         <p className="slogan">这个家伙太懒了，什么都没留下。</p>
+        <p style={{display:'none'}}>I am Colin.</p>
       </div>
     </Layout>
   )
