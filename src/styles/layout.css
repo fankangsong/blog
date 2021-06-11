@@ -92,6 +92,7 @@
   max-width: 800px;
   width: 90%;
   font-size: 18px;
+  overflow: hidden;
 }
 .content img {
   max-width: 100%;
