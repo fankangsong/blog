@@ -3,7 +3,7 @@ module.exports = {
     title: `imcolin.fan`,
     description: `Colin 的个人网站`,
     author: `@Colin`,
-    siteUrl: `https://imcolinfan`,
+    siteUrl: `https://imcolin.fan`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
