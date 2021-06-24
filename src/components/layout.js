@@ -22,7 +22,7 @@ import '../styles/default.css'
 
 const Layout = ({ title, props, children }) => {
   useEffect(() => {
-    const aegis = new Aegis({
+    new Aegis({
       id: 'PVqyZlB0G1zEMGvOwE', // 应用ID，即上报key
       reportApiSpeed: true, // 接口测速
       reportAssetSpeed: true, // 静态资源测速
