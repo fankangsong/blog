@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
@@ -21,14 +21,23 @@ import '../styles/layout.css'
 import '../styles/default.css'
 
 const Layout = ({ title, props, children }) => {
+  const firstRener = useRef(null);
+
   useEffect(() => {
-    new Aegis({
-      id: 'PVqyZlB0G1zEMGvOwE', // 应用ID，即上报key
-      reportApiSpeed: true, // 接口测速
-      reportAssetSpeed: true, // 静态资源测速
-      spa: true // spa 应用页面跳转的时候开启 pv 计算
-    });
-  }, []);
+  //   const { hostname } = window.location;
+  //   // if (hostname === 'localhost') return;
+
+  //   if (!firstRener.current) {
+  //     console.log('111')
+  //     firstRener.current = new Aegis({
+  //       id: 'PVqyZlB0G1zEMGvOwE', // 应用ID，即上报key
+  //       reportApiSpeed: true, // 接口测速
+  //       reportAssetSpeed: true, // 静态资源测速
+  //       spa: true // spa 应用页面跳转的时候开启 pv 计算
+  //     });
+  //   }
+
+  // }, []);
   
   return (
     <>

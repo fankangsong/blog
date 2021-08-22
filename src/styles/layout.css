@@ -99,17 +99,24 @@
 }
 
 .blog-list {
-  /* list-style: none; */
+  width: 480px;
+  margin: 0 auto;
+  list-style: none;
+}
+.blog-list li {
+  width: 100%;
+  display: flex;
 }
 .blog-list a {
+  flex: 1;
   text-decoration: none;
 }
 .blog-list .date {
-  display: inline-block;
+  /* display: inline-block; */
   margin-left: 1em;
   color: #999;
   font-size: 90%;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
 }
 .blog {
   /* padding-top: 20px; */
