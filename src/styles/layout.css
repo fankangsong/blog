@@ -49,6 +49,8 @@
   z-index: 2;
 }
 .navigator a {
+  font-size: 18px;
+  font-weight: bold;
   padding: 2px 8px 6px 2px;
   display: inline-block;
   z-index: 3;
@@ -112,14 +114,12 @@
   text-decoration: none;
 }
 .blog-list .date {
-  /* display: inline-block; */
   margin-left: 1em;
   color: #999;
   font-size: 90%;
-  /* vertical-align: bottom; */
 }
 .blog {
-  /* padding-top: 20px; */
+  padding-top: 20px;
 }
 .blog .date {
   text-align: right;
