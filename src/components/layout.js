@@ -9,9 +9,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-// 引入后进行初始化
-import Aegis from 'aegis-web-sdk';
-
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
