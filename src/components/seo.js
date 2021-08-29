@@ -68,7 +68,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
+    </Helmet>
   )
 }
 

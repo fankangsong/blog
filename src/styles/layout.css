@@ -99,6 +99,9 @@
 .content img {
   max-width: 100%;
 }
+.design {
+  padding-top: 20px;
+}
 
 .blog-list {
   width: 480px;
