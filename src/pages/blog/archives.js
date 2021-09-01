@@ -1,40 +1,30 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 
 function Posts({ list }) {
-  list.splice(3);
   return (
-    <div className="blog-list">
-    <ul>
-      {list.map(({ node: { frontmatter, id, excerpt } }) => {
+    <ul className="blog-list">
+      {list.map(({ node: { frontmatter, id } }) => {
         const { title, date, path } = frontmatter
         return (
-          <li key={id}>
-            <p>
-            <span className="date">{date}</span>
+          <li key={id} className="archives-li">
             <Link to={path} className="title">
               {title}
             </Link>
-            
-            </p>
-            <p className="excerpt">{excerpt}</p>
+            <span className="date2">{date}</span>
           </li>
         )
       })}
     </ul>
-
-    <p style={{textAlign: 'right'}}><Link to="./archives">更多...</Link></p>
-    </div>
   )
 }
 
-export default function BlogIndexPage(props) {
+export default function BlogArchives(props) {
   const { data: { allMarkdownRemark: { edges } }} = props;
   return (
-    <Layout title="博客">
+    <Layout title="所有文章">
       <div className="content design">
-        {/* <h2>文章</h2> */}
         <Posts list={edges} />
       </div>
     </Layout>

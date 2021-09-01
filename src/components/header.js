@@ -9,9 +9,9 @@ const Header = () => (
     </Link>
 
     <ul className="navigator">
-      <li>
+      {/* <li>
         <Link to={`/`}>首页</Link>
-      </li>
+      </li> */}
       <li>
         <Link to={`/blog`}>博客</Link>
       </li>
