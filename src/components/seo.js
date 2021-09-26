@@ -25,8 +25,8 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description;
-  
+  const metaDescription = description || site.siteMetadata.description
+
   return (
     <Helmet
       htmlAttributes={{
@@ -69,6 +69,16 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
+      <meta
+        name="theme-color"
+        content="#fff"
+        media="(prefers-color-scheme: light)"
+      />
+      <meta
+        name="theme-color"
+        content="#000"
+        media="(prefers-color-scheme: dark)"
+      />
       <script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
     </Helmet>
   )
