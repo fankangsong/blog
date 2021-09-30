@@ -76,7 +76,7 @@ function SEO({ description, lang, meta, title }) {
       />
       <meta
         name="theme-color"
-        content="#000"
+        content="#212121"
         media="(prefers-color-scheme: dark)"
       />
       <script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
