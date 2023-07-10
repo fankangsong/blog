@@ -10,5 +10,5 @@ export PATH=/root/.nvm/versions/node/v10.24.1/bin:/usr/local/sbin:/usr/local/bin
 
 # cp -rf public ../html/imcolin.fan/
 
-MSG="blog发布啦！https://imcolin.fan"
-curl https://service-97nccwao-1251499259.ap-hongkong.apigateway.myqcloud.com/release/telebot?msg=$MSG
+# MSG="blog发布啦！https://imcolin.fan"
+# curl https://service-97nccwao-1251499259.ap-hongkong.apigateway.myqcloud.com/release/telebot?msg=$MSG
