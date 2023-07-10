@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `imcolin.fan`,
         short_name: `imcolin.fan`,
         start_url: `/`,
         background_color: `#f39342`,
