@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sh build-blog.sh >> build.log 2>&1 &
+sh /root/blog/build-blog.sh >> build.log 2>&1 &
