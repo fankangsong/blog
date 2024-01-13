@@ -17,8 +17,8 @@ import '../styles/han.css'
 import '../styles/layout.css'
 import '../styles/default.css'
 
-const Layout = ({ title, props, children }) => {
-  
+const Layout = props => {
+  const { title, children } = props
   return (
     <>
       <SEO title={title} />
@@ -35,7 +35,7 @@ const Layout = ({ title, props, children }) => {
         render={data => (
           <div className="type">
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div>
+            <div className="wrap">
               <main className="main">{children}</main>
               <Footer />
             </div>

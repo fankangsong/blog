@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Layout from '../components/layout'
-import ImageAbout from '../images/about.png';
-import ImageHome from '../images/home.jpg';
+import { Link } from 'gatsby'
+import ImageAbout from '../images/about.png'
 
 const AboutPage = () => {
   const [status, setStatus] = useState(0)
@@ -29,13 +29,25 @@ const AboutPage = () => {
   return (
     <Layout title="关于">
       <div className="content design">
+        <p>👋 Hi，there!</p>
+
+        <ul>
+          <li>一名程序员，在深圳工作</li>
+          <li>
+            爱好广泛：吉他🎸、
+            <a href="https://music.douban.com/mine?status=collect">
+              黑人音乐🎵
+            </a>
+            、<Link to="/blog/tags/摄影">摄影📷</Link>、游泳🏊、
+            <a href="/running" target="_blank">
+              跑步🏃
+            </a>
+            、徒步⛰️、露营⛺️、滑板🛹
+          </li>
+        </ul>
         <h2>我和女儿</h2>
         <img src={ImageAbout} alt="about" />
-        <p>&nbsp;</p>
-        <h2>#社畜#</h2>
-        <p>&nbsp;</p>
-        <img src={ImageHome} alt="me" />
-        <p>&nbsp;</p>
+
         <h2>我去过的地方...</h2>
         {status === 0 && (
           <p className="sans-serif" style={{ fontSize: '14px' }}>

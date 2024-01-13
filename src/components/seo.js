@@ -79,7 +79,7 @@ function SEO({ description, lang, meta, title }) {
         content="#212121"
         media="(prefers-color-scheme: dark)"
       />
-      <script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script>
+      {/* <script src="https://cdn-go.cn/aegis/aegis-sdk/latest/aegis.min.js"></script> */}
     </Helmet>
   )
 }

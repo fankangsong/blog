@@ -2,8 +2,8 @@
 path: '/blog/digitalocean-vps-experience'
 date: '2014-07-28'
 title: 'DigitalOcean 月付 5 刀 VPS 评测'
+tags: ['随笔']
 ---
-
 
 一年前我从 Google Blogger 迁移到 VPS，在[DirectSpace](http://www.directspace.net/)租用了年付 15 美刀虚拟主机，一年多期间，directspace 挂了一次，最近一次是因为垃圾邮件被误停机。
 
