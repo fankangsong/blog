@@ -49,8 +49,11 @@ export default function BlogIndexPage(props) {
 }
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { tags: { ne: "摄影" } } }
+    ) {
       edges {
         node {
           id
