@@ -11,11 +11,13 @@ export default function Template({
     <Layout title={frontmatter.title}>
       <div className="content blog">
         <h1 className="title ">{frontmatter.title}</h1>
-        <p className="date">{frontmatter.date}</p>
+        <p className="date">Colin 发布于 {frontmatter.date}</p>
         <article
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+
+        <hr />
       </div>
     </Layout>
   )

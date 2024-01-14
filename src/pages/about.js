@@ -29,37 +29,38 @@ const AboutPage = () => {
   return (
     <Layout title="关于">
       <div className="content design">
-        <p>👋 Hi，there!</p>
+        <h3>👋 Hi，there!</h3>
 
-        <ul>
-          <li>一名程序员，在深圳工作</li>
-          <li>
-            爱好广泛：吉他🎸、
-            <a href="https://music.douban.com/mine?status=collect">
-              黑人音乐🎵
-            </a>
-            、<Link to="/blog/tags/摄影">摄影📷</Link>、游泳🏊、
-            <a href="/running" target="_blank">
-              跑步🏃
-            </a>
-            、徒步⛰️、露营⛺️、滑板🛹
-          </li>
-        </ul>
-        <h2>我和女儿</h2>
-        <img src={ImageAbout} alt="about" />
+        <p>我是 Colin，程序员、中年三明治。在深圳生活工作。</p>
+        <p>
+          这里会分享一些读书笔记、摄影照片。爱好笔记广泛：吉他🎸、
+          <a href="https://music.douban.com/mine?status=collect">黑人音乐🎵</a>
+          、<Link to="/blog/tags/摄影">摄影📷</Link>、游泳🏊、
+          <a href="/running" target="_blank">
+            跑步🏃
+          </a>
+          、徒步⛰️、露营⛺️、滑板🛹、骑行🚴
+        </p>
 
-        <h2>我去过的地方...</h2>
+        <h3>这是我和女儿的自画像</h3>
+        <div style={{ textAlign: 'center' }}>
+          <img src={ImageAbout} alt="about" style={{ width: '60%' }} />
+        </div>
+
+        <h3>我去过的地方...</h3>
         {status === 0 && (
           <p className="sans-serif" style={{ fontSize: '14px' }}>
-            加载 Google 地图...
+            等待 Google 地图...
           </p>
         )}
         {status === 2 && (
           <p className="sans-serif" style={{ fontSize: '14px' }}>
-            网络错误，请尝试越过 GFW。
+            Google 地图加载失败❌
           </p>
         )}
+
         <iframe
+          style={{ display: status === 1 ? '' : 'none' }}
           title="google maps"
           id="google-map"
           className="google-map"
