@@ -135,4 +135,13 @@ hr {
   blockquote::before {
     display: none;
   }
+
+  .blog-list .archives-li a,
+  .blog-list .date2{
+    background-color: #212121;
+  }
+
+  .blog-list .archives-li::after{
+    border-color: #505050;
+  }
 }

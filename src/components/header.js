@@ -12,17 +12,17 @@ const Header = props => {
       <ul className="navigator">
         {
           <li>
-            <Link to={`/`}>首页</Link>
+            <Link to={`/`}>欢迎</Link>
           </li>
         }
         <li>
-          <Link to={`/blog`}>博客</Link>
+          <Link to={`/blog/archives`}>随笔</Link>
         </li>
         <li>
-          <Link to={`/blog/tags/摄影`}>摄影</Link>
+          <Link to={`/photography`}>摄影</Link>
         </li>
         <li>
-          <Link to={`/about`}>关于</Link>
+          <Link to={`/about`}>我</Link>
         </li>
       </ul>
     </header>

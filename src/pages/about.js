@@ -27,13 +27,16 @@ const AboutPage = () => {
   }, [])
 
   return (
-    <Layout title="关于">
+    <Layout title="作者">
       <div className="content design">
         <h3>👋 Hi，there!</h3>
 
-        <p>我是 Colin，程序员、中年三明治。在深圳生活工作。</p>
         <p>
-          这里会分享一些读书笔记、摄影照片。爱好笔记广泛：吉他🎸、
+          我是
+          Colin，程序员、中年三明治，80后，在深圳生活工作。这里会分享一些读书笔记和摄影照片。
+        </p>
+        <p>
+          我的爱好广泛：吉他🎸、
           <a href="https://music.douban.com/mine?status=collect">黑人音乐🎵</a>
           、<Link to="/blog/tags/摄影">摄影📷</Link>、游泳🏊、
           <a href="/running" target="_blank">
