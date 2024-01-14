@@ -37,8 +37,10 @@ const AboutPage = () => {
         </p>
         <p>
           我的爱好广泛：吉他🎸、
-          <a href="https://music.douban.com/mine?status=collect">黑人音乐🎵</a>
-          、<Link to="/blog/tags/摄影">摄影📷</Link>、游泳🏊、
+          <a href="https://music.douban.com/people/fks1945/" target="_blank">
+            黑人音乐🎵
+          </a>
+          、<Link to="/photography">摄影📷</Link>、游泳🏊、
           <a href="/running" target="_blank">
             跑步🏃
           </a>
