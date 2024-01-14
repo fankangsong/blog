@@ -6,5 +6,7 @@ cd /home/share/blog
 
 git pull
 npm run build
-scp -r public blog:/root/html/imcolin.fan/
+# scp -r public blog:/root/html/imcolin.fan/
+
+rsync -avz -P public blog:/root/html/imcolin.fan/
 sh /root/sh/notify.sh "blog已部署完成✅"
