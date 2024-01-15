@@ -1,3 +1,3 @@
 #!/bin/sh -i
 
-scp -r content/blog/post/* thinkpad:/root/blog/content/blog/post
+rsync -avz --progress ./post thinkpad:/home/share/blog/

@@ -19,15 +19,7 @@ export default function Template({
           {frontmatter.tags && (
             <>
               标记在
-              {frontmatter.tags.map(tag => (
-                <Link
-                  to={`/blog/tags/${tag}`}
-                  key={tag}
-                  style={{ marginLeft: '6px' }}
-                >
-                  {tag}
-                </Link>
-              ))}
+              {frontmatter.tags.map(tag => ({ tag }))}
             </>
           )}
         </p>
