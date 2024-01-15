@@ -8,7 +8,6 @@ function Posts({ list }) {
     <div className="blog-list">
       <ul>
         {list.map(({ node }) => {
-          console.log(node)
           const { frontmatter, id, excerpt } = node
           const { title, date, path } = frontmatter
           return (

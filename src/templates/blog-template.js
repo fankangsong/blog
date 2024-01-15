@@ -16,12 +16,6 @@ export default function Template({
           <span style={{ marginRight: '10px' }}>
             Colin 发布于 {frontmatter.date}
           </span>
-          {frontmatter.tags && (
-            <>
-              标记在
-              {frontmatter.tags.map(tag => ({ tag }))}
-            </>
-          )}
         </p>
 
         <article
