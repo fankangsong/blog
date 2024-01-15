@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 
 export default function Template({
@@ -7,11 +7,31 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+
   return (
     <Layout title={frontmatter.title}>
       <div className="content blog">
         <h1 className="title ">{frontmatter.title}</h1>
-        <p className="date">Colin 发布于 {frontmatter.date}</p>
+        <p className="date">
+          <span style={{ marginRight: '10px' }}>
+            Colin 发布于 {frontmatter.date}
+          </span>
+          {frontmatter.tags && (
+            <>
+              标记在
+              {frontmatter.tags.map(tag => (
+                <Link
+                  to={`/blog/tags/${tag}`}
+                  key={tag}
+                  style={{ marginLeft: '6px' }}
+                >
+                  {tag}
+                </Link>
+              ))}
+            </>
+          )}
+        </p>
+
         <article
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -31,6 +51,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         path
         title
+        tags
       }
     }
   }

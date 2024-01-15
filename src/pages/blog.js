@@ -39,9 +39,8 @@ export default function BlogIndexPage(props) {
     },
   } = props
   return (
-    <Layout title="博客">
+    <Layout title="随笔">
       <div className="content design">
-        {/* <h2>文章</h2> */}
         <Posts list={edges} />
       </div>
     </Layout>

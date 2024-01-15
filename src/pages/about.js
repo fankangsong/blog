@@ -21,6 +21,13 @@ const AboutPage = () => {
       setStatus(2)
     }, 10000)
 
+    var canvas = document.getElementById('contact-me')
+    var ctx = canvas.getContext('2d')
+    ctx.font = '18px serif'
+    ctx.fillText('联系我：', 0, 20)
+    ctx.fillStyle = '#f05037'
+    ctx.fillText('fankangsong@gmail.com', 70, 20)
+
     return () => {
       clearTimeout(timer)
     }
@@ -29,22 +36,23 @@ const AboutPage = () => {
   return (
     <Layout title="作者">
       <div className="content design">
-        <h3>👋 Hi，there!</h3>
+        <h3>👋 你好!</h3>
 
         <p>
           我是
-          Colin，程序员、中年三明治，80后，在深圳生活工作。这里会分享一些读书笔记和摄影照片。
-        </p>
-        <p>
-          我的爱好广泛：吉他🎸、
+          Colin，来自深圳的80后程序员，中年三明治。在这里分享随笔和摄影。我的爱好广泛：弹吉他、
           <a href="https://music.douban.com/people/fks1945/" target="_blank">
-            黑人音乐🎵
+            音乐
           </a>
-          、<Link to="/photography">摄影📷</Link>、游泳🏊、
+          、<Link to="/photography">摄影</Link>。喜欢的运动：游泳、
           <a href="/running" target="_blank">
-            跑步🏃
+            跑步
           </a>
-          、徒步⛰️、露营⛺️、滑板🛹、骑行🚴
+          、徒步、滑板、骑行。
+        </p>
+
+        <p>
+          <canvas id="contact-me" width="300" height="30" />
         </p>
 
         <h3>这是我和女儿的自画像</h3>

@@ -179,8 +179,11 @@
 .blog {
   padding-top: 20px;
 }
+.blog h1 {
+  text-align: center;
+}
 .blog .date {
-  text-align: right;
+  text-align: center;
   color: #999;
 }
 .blog-post-content {
