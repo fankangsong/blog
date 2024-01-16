@@ -108,6 +108,7 @@
 
 .blog-list {
   /* width: 480px; */
+  max-width: 800px;
   margin: 0 auto;
   list-style: none;
 }
