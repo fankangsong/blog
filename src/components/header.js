@@ -22,6 +22,11 @@ const Header = props => {
           <Link to={`/photography`}>摄影</Link>
         </li>
         <li>
+          <a href="/running/">
+            跑步<span>🏃</span>
+          </a>
+        </li>
+        <li>
           <Link to={`/about`}>我</Link>
         </li>
       </ul>
