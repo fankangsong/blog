@@ -23,7 +23,8 @@ const AboutPage = () => {
 
     var canvas = document.getElementById('contact-me')
     var ctx = canvas.getContext('2d')
-    ctx.font = '18px serif'
+    ctx.font =
+      '18px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"'
     ctx.fillText('联系我：', 0, 20)
     ctx.fillStyle = '#f05037'
     ctx.fillText('fankangsong@gmail.com', 70, 20)
