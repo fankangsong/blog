@@ -9,7 +9,7 @@
 
 }
 .main {
-  min-height: calc(100vh - 220px);
+  min-height: calc(100vh - 350px);
 }
 .logo-link {
   display: block;
