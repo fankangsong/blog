@@ -12,6 +12,7 @@ function Posts({ list }) {
             <Link to={path} className="title">
               {title}
             </Link>
+            <span className="middle-line"></span>
             <span className="date2">{date}</span>
           </li>
         )
@@ -28,7 +29,9 @@ export default function BlogArchives(props) {
   } = props
   return (
     <Layout title="随笔">
-      <h2 style={{ textAlign: 'center' }}>✒️ 随笔</h2>
+      <h2 style={{ textAlign: 'center' }}>
+        <span>✒️</span> 随笔
+      </h2>
       <div className="content design">
         <Posts list={edges} />
       </div>

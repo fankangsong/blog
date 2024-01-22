@@ -18,7 +18,7 @@ import '../styles/layout.css'
 import '../styles/default.css'
 
 const Layout = props => {
-  const { title, children } = props
+  const { title, theme, children } = props
   return (
     <>
       <SEO title={title} />
@@ -34,7 +34,7 @@ const Layout = props => {
         `}
         render={data => (
           <div className="type">
-            <Header siteTitle={data.site.siteMetadata.title} />
+            <Header theme={theme} />
             <div className="wrap">
               <main className="main">{children}</main>
               <Footer />

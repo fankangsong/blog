@@ -1,8 +1,24 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import AvatarImage from '../images/avatar.jpg'
+import './header.css'
 
-const Header = props => {
+const Header = ({ theme }) => {
+  if (theme === 'simple') {
+    return (
+      <div
+        style={{
+          margin: '0 auto',
+          maxWidth: '800px',
+          width: '90%',
+        }}
+      >
+        <Link className="back-to-home" to="/">
+          <span>🏠</span>返回
+        </Link>
+      </div>
+    )
+  }
   return (
     <header className="site-header">
       <Link to={`/`} className="logo-link">

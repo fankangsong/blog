@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 export default function Template({
@@ -9,7 +9,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout title={frontmatter.title}>
+    <Layout title={frontmatter.title} theme="simple">
       <div className="content blog">
         <h1 className="title ">{frontmatter.title}</h1>
         <p className="date">
@@ -23,7 +23,7 @@ export default function Template({
           dangerouslySetInnerHTML={{ __html: html }}
         />
 
-        <hr />
+        <hr style={{ marginTop: '40px' }} />
       </div>
     </Layout>
   )

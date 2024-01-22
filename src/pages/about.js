@@ -37,7 +37,9 @@ const AboutPage = () => {
   return (
     <Layout title="作者">
       <div className="content design">
-        <h3>👋 你好!</h3>
+        <h3>
+          <span>👋</span> 你好!
+        </h3>
 
         <p>
           我是
@@ -69,7 +71,7 @@ const AboutPage = () => {
         )}
         {status === 2 && (
           <p className="sans-serif" style={{ fontSize: '14px' }}>
-            Google 地图加载失败❌
+            Google 地图加载失败<span>❌</span>
           </p>
         )}
 

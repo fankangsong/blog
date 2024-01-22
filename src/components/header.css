@@ -1,0 +1,12 @@
+.back-to-home {
+  border-radius: 0 0 8px 8px;
+  padding: 8px;
+  background-color: #fada5c;
+  text-decoration: none;
+}
+
+.back-to-home:hover {
+  text-decoration: none;
+  background-color: #F05037;
+  color: #fff;
+}

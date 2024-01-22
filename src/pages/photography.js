@@ -25,6 +25,7 @@ function Posts({ list }) {
             <Link to={path} className="title">
               {title}
             </Link>
+            <span className="middle-line"></span>
             <span className="date2">{date}</span>
           </li>
         )
@@ -41,7 +42,9 @@ export default function PhotographyPage(props) {
   } = props
   return (
     <Layout title="摄影">
-      <h2 style={{ textAlign: 'center' }}>📷 摄影</h2>
+      <h2 style={{ textAlign: 'center' }}>
+        <span>📷</span> 摄影
+      </h2>
       <div className="content design">
         <Posts list={edges} />
       </div>
