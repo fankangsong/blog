@@ -28,7 +28,7 @@ const Header = ({ theme }) => {
       <ul className="navigator">
         {
           <li>
-            <Link to={`/`}>欢迎</Link>
+            <Link to={`/`}>Hi</Link>
           </li>
         }
         <li>
