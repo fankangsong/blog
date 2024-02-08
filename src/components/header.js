@@ -13,8 +13,8 @@ const Header = ({ theme }) => {
           width: '90%',
         }}
       >
-        <Link className="back-to-home" to="/">
-          <span>🏠</span>返回
+        <Link className="back-to-home" to="/" title="回到首页">
+          <span>🏠</span>
         </Link>
       </div>
     )
