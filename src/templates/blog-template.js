@@ -10,7 +10,7 @@ export default function Template({
 
   return (
     <Layout title={frontmatter.title} theme="simple">
-      <div className="content blog">
+      <div className="content blog" id="content">
         <h1 className="title ">{frontmatter.title}</h1>
         <p className="date">
           <span style={{ marginRight: '10px' }}>

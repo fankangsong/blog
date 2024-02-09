@@ -3,25 +3,35 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 
 function Posts({ list }) {
+  list.splice(3)
   return (
-    <ul className="blog-list">
-      {list.map(({ node: { frontmatter, id } }) => {
-        const { title, date, path } = frontmatter
-        return (
-          <li key={id} className="archives-li">
-            <Link to={path} className="title">
-              {title}
-            </Link>
-            <span className="middle-line"></span>
-            <span className="date2">{date}</span>
-          </li>
-        )
-      })}
-    </ul>
+    <div className="blog-list">
+      <ul>
+        {list.map(({ node }) => {
+          const { frontmatter, id, excerpt } = node
+          const { title, date, path } = frontmatter
+          return (
+            <li key={id}>
+              <p>
+                <span className="date">{date}</span>
+                <Link to={path} className="title">
+                  {title}
+                </Link>
+              </p>
+              <p className="excerpt">{excerpt}</p>
+            </li>
+          )
+        })}
+      </ul>
+
+      <p style={{ textAlign: 'right' }}>
+        <Link to="./archives">更多...</Link>
+      </p>
+    </div>
   )
 }
 
-export default function BlogArchives(props) {
+export default function BlogIndexPage(props) {
   const {
     data: {
       allMarkdownRemark: { edges },
@@ -29,9 +39,6 @@ export default function BlogArchives(props) {
   } = props
   return (
     <Layout title="随笔">
-      <h2 style={{ textAlign: 'center' }}>
-        <span>✒️</span> 随笔
-      </h2>
       <div className="content design">
         <Posts list={edges} />
       </div>
@@ -40,7 +47,7 @@ export default function BlogArchives(props) {
 }
 
 export const pageQuery = graphql`
-  query {
+  {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { tags: { ne: "摄影" } } }
@@ -53,6 +60,7 @@ export const pageQuery = graphql`
             date(formatString: "YYYY-MM-DD")
             path
             title
+            tags
           }
         }
       }

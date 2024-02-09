@@ -1,19 +1,44 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
-import AvatarImage from '../images/avatar.jpg'
+import { useLocation } from '@reach/router'
 import './header.css'
+import AvatarImage from '../images/avatar.jpg'
+
+const DEFAULT_VAL = 20
 
 const Header = ({ theme }) => {
+  const location = useLocation()
+  const [, rootPath] = location.pathname.split('/')
+
+  const [fixValue, setFixvalue] = useState(DEFAULT_VAL)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth
+
+      let val = DEFAULT_VAL
+      if (windowWidth >= 920) {
+        const val = (windowWidth - 800) / 2 - 60
+        setFixvalue(val)
+      } else {
+        setFixvalue(DEFAULT_VAL)
+      }
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+  }, [])
+
   if (theme === 'simple') {
     return (
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: '800px',
-          width: '90%',
-        }}
-      >
-        <Link className="back-to-home" to="/" title="回到首页">
+      <div>
+        <Link
+          className="back-to-home"
+          to={`/${rootPath}`}
+          title="返回"
+          style={{ right: fixValue }}
+        >
           <span>🏠</span>
         </Link>
       </div>
