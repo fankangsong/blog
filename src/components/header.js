@@ -57,7 +57,7 @@ const Header = ({ theme }) => {
           </li>
         }
         <li>
-          <Link to={`/blog/archives`}>随笔</Link>
+          <Link to={`/blog`}>随笔</Link>
         </li>
         <li>
           <Link to={`/photography`}>摄影</Link>
