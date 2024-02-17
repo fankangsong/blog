@@ -21,7 +21,6 @@
 }
 .logo-link:hover {
   border: none;
-  transform: rotate(-4deg);
 }
 
 .logo-link img {
@@ -201,13 +200,4 @@
   display: block;
 }
 
-.home {
-  text-align: center;
-}
-.home .slogan {
-  background-color: #000;
-  color: #fff;
-  padding: 2px 6px;
-  display: inline-block;
-  transform: rotate(-4deg);
-}
+
