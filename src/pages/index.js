@@ -15,7 +15,7 @@ function IndexPage(props) {
         <div className="home-inner">
           <h2>最近...</h2>
         </div>
-        <p className="slogan">这个家伙太懒了，什么都没留下。</p>
+        <p className="slogan">这个家伙太懒了，什么都没留下</p>
 
         <div>
           <p className="slogan" style={{ transform: 'rotate(4deg)' }}>
