@@ -43,7 +43,7 @@ const AboutPage = () => {
 
         <p>
           我是
-          Colin，来自深圳的80后程序员，中年三明治。在这里分享随笔和摄影。我的爱好广泛：弹吉他、
+          Colin，来自深圳的80后程序员，中年三明治。在这里分享随笔和摄影。我的爱好广泛：弹吉他
           、<Link to="/photography">摄影</Link>。喜欢的运动：游泳、
           <a href="/running" target="_blank">
             跑步
