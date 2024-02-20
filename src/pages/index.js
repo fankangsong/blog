@@ -24,7 +24,7 @@ function IndexPage(props) {
         </div>
 
         <div>
-          <p className="slogan" title={excerpt}>
+          <p className="go" title={excerpt}>
             <Link to={path}>👉{title}👈</Link>
           </p>
         </div>

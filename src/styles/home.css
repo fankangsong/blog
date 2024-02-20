@@ -18,9 +18,14 @@
   display: inline-block;
   transform: rotate(-4deg)
 }
-
-.home .slogan a{
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 42px;
+.go {
+  display: inline-block;
+  transform: rotate(-4deg)
 }
+.go a{
+  font-weight: bold;
+  font-size: 42px;
+ 
+  text-decoration: rgb(45, 172, 45) wavy underline;
+}
+
