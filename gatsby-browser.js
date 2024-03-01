@@ -9,18 +9,12 @@
 const DEV_HOST = ['localhost', 'myblog.com', 'mublog.dev']
 
 export const onClientEntry = () => {
-  window.onload = () => {
-    const { Aegis } = window
-    const { hostname } = window.location
-    const isDevEnv = DEV_HOST.some(url => hostname.includes(url))
+  const { hostname } = window.location;
+  if (hostname === 'localhost') return;
 
-    if (isDevEnv || !Aegis) return
-
-    // window.aegis = new Aegis({
-    //   id: 'PVqyZlB0G1zEMGvOwE', // 应用ID，即上报key
-    //   reportApiSpeed: true, // 接口测速
-    //   reportAssetSpeed: true, // 静态资源测速
-    //   spa: true // spa 应用页面跳转的时候开启 pv 计算
-    // });
-  }
+  var _hmt = _hmt || [];
+  var hm = document.createElement('script');
+  hm.src = "https://hm.baidu.com/hm.js?c7ed426d8df2bf6697973aef72869051";
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(hm, s);
 }
