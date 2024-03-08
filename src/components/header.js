@@ -70,6 +70,9 @@ const Header = ({ theme }) => {
         <li>
           <Link to={`/about`}>我</Link>
         </li>
+        <li>
+          <a href="https://www.travellings.cn/go.html">开往🚇</a>
+        </li>
       </ul>
     </header>
   )
