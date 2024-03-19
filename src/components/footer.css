@@ -1,0 +1,23 @@
+/* footer */
+.site-footer {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+.site-footer .icon {
+  margin: 0 5px;
+  position: relative;
+  top: 3px;
+}
+.travellings {
+  margin-left: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+  border-left: 1px solid #ddd;
+}
+.travellings:hover{
+  text-decoration: none;
+}
