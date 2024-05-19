@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /home/share/blog
+cd /var/services/homes/fankangsong/code
 sh build-blog.sh >> build.log 2>&1 &
