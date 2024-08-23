@@ -4,6 +4,8 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/syno/sbin:/usr/syno/bin:/usr/local/sbin:
 
 cd /var/services/homes/fankangsong/code/workspace/blog || exit 1
 
+rm -rf public .cache
+
 git pull || exit 1
 
 npm run build || exit 1
