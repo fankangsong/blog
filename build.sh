@@ -2,11 +2,12 @@
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/syno/sbin:/usr/syno/bin:/usr/local/sbin:/usr/local/bin:/var/services/homes/fankangsong/.local/bin
 
-cd /root/blog
+cd /var/services/homes/fankangsong/code/workspace/blog || exit 1
 
-git pull
-npm run build
+git pull || exit 1
 
-cp -r public /root/html/imcolin.fan/
+npm run build || exit 1
 
-curl -X POST -d "token=Colin123.com&msg=博客编译完成" https://imcolin.fan/notify
+rsync -avz --chmod=777 -P public blog:/root/html/imcolin.fan || exit 1
+
+curl -X POST -d "token=Colin123.com&msg=博客发布完成" https://imcolin.fan/notify || exit 1
