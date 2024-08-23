@@ -18,7 +18,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "axios": "^0.19.0",
@@ -31,7 +32,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
     "develop": "gatsby develop -p 9000",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
