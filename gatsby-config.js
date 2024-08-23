@@ -19,6 +19,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        ignore: [
+          '**/node_modules/**',
+          '**/.cache/**',
+          '**/public/**',
+          '**/dist/**',
+          '**/*.log', // 忽略所有日志文件
+        ],
       },
     },
     {

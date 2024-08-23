@@ -48,7 +48,7 @@ const AboutPage = () => {
           <a href="/running" target="_blank">
             跑步
           </a>
-          、徒步、滑板、骑行。
+          、徒步、滑板、骑行。最近在更新<a href="https://www.xiaohongshu.com/user/profile/6534b2ce00000000060047f4" target="_blank">📕小红书</a>
         </p>
 
         <p>
