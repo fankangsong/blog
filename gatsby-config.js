@@ -64,6 +64,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+
+    {
+      resolve: `gatsby-plugin-clarity`,
+      options: {
+        // 清晰度项目 ID 的字符串值
+        clarity_project_id: 'jtd1ny51sb',
+        // 用于在开发时启用清晰度时的布尔值
+        // true 将在开发和生产环境中启用清晰度跟踪代码
+        // false 将仅在生产环境中启用清晰度跟踪代码
+        enable_on_dev_env: false
+      },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
