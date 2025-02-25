@@ -1,10 +1,11 @@
-.site-header
-.site-header {
+.site-header .site-header {
   padding: 20px 0;
 }
+
 .main {
   min-height: calc(100vh - 350px);
 }
+
 .logo-link {
   display: block;
   width: 120px;
@@ -13,6 +14,7 @@
   overflow: hidden;
   transition: transform 0.3s;
 }
+
 .logo-link:hover {
   border: none;
 }
@@ -38,12 +40,14 @@
   list-style: none;
   text-align: center;
 }
-.navigator > li {
+
+.navigator>li {
   display: inline-block;
   margin: 0 10px;
   position: relative;
   z-index: 2;
 }
+
 .navigator a {
   font-size: 18px;
   font-weight: bold;
@@ -57,10 +61,12 @@
   background-image: linear-gradient(#fada5c 0%, #fada5c 40%);
   transform: rotate(-4deg);
 }
+
 .navigator a:hover {
   color: #ec3a1e;
   text-decoration: none;
 }
+
 .navigator a:hover::after {
   border-color: #fada5c;
 }
@@ -79,9 +85,11 @@
   font-size: 18px;
   overflow: hidden;
 }
+
 .content img {
   max-width: 100%;
 }
+
 .design {
   padding-top: 20px;
 }
@@ -93,10 +101,12 @@
   padding: 0;
   list-style: none;
 }
+
 .blog-list ul {
   margin: 0;
   padding: 0;
 }
+
 .blog-list li {
   width: 100%;
   margin-bottom: 1em;
@@ -104,20 +114,23 @@
   margin-left: 0;
   padding-left: 0;
 }
+
 .blog-list li p {
   /* display: flex; */
   width: 100%;
   margin: 0;
 }
+
 .blog-list a {
   /* flex: 1; */
   text-decoration: none;
 }
+
 .blog-list .date {
   display: block;
   color: #999;
   font-size: 90%;
-  
+
 }
 
 
@@ -126,13 +139,14 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-weight: bold;
 }
 
 .blog-list .archives-li a {
   /* background-color: #fff; */
 }
 
-.blog-list .archives-li .middle-line{
+.blog-list .archives-li .middle-line {
   height: 16px;
   flex-grow: 1;
   margin: 0 4px;
@@ -141,39 +155,47 @@
 
 .blog-list .date2 {
   color: #999;
-  width: 100px;
+  width: 120px;
 }
 
 .blog-list .excerpt {
   color: #666;
   font-size: 14px;
 }
+
 .blog {
   padding-top: 20px;
 }
+
 .blog h1 {
   text-align: center;
 }
+
 .blog .date {
   text-align: center;
   color: #999;
 }
+
 .blog-post-content {
   /* font-size: 18px; */
-  text-align: justify;
+  /* text-align: justify; */
 }
+
 .blog-post-content img {
   width: 100%;
   max-width: 100%;
 }
+
 .pictures img {
   display: block;
 }
-.gatsby-resp-image-figure{
+
+.gatsby-resp-image-figure {
   padding: 10px 10px 0 10px;
   background-color: #000;
 }
-.gatsby-resp-image-figcaption p{
+
+.gatsby-resp-image-figcaption p {
   margin: 0;
   font-size: 14px;
   background-color: #000;
@@ -189,8 +211,7 @@
   height: 480px;
   margin: auto;
 }
+
 .google-map.done {
   display: block;
 }
-
-

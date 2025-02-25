@@ -17,9 +17,6 @@ const Footer = () => {
       <span>imcolin.fan</span>
       <a href="https://www.travellings.cn/go-by-clouds.html" target="_blank" className="travellings">🚇开往</a>
     </footer>
-    <div style={{ textAlign: 'center', padding: '10px 0'}}>
-      <img src="https://count.getloli.com/@imcolin.fan?theme=capoo-2" alt="访客次数" width="320" />
-    </div>
     </>
   )
 }
