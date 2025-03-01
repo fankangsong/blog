@@ -12,8 +12,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 import SEO from './seo'
-import '../styles/normalize.css'
-import '../styles/han.css'
+// import '../styles/normalize.css'
+// import '../styles/han.css'
 import '../styles/layout.css'
 import '../styles/default.css'
 
@@ -33,7 +33,7 @@ const Layout = props => {
           }
         `}
         render={data => (
-          <div className="type">
+          <div className="">
             <Header theme={theme} />
             <div className="wrap">
               <main className="main">{children}</main>

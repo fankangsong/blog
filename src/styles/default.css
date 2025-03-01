@@ -1,22 +1,10 @@
 ::selection {
   background-color: rgb(255, 225, 80, 0.5);
 }
-body {
-  /* font-family: 'Biaodian Pro Serif GB', 'Numeral LF Serif', 'Microsoft Yahei',
-    Georgia, 'Times New Roman', 'Han Songti GB', serif; */
-  /* font-family:'Courier New', Courier, monospace; */
-  
-}
 
 body {
   font-family: 
-    /* macOS 衬线字体 */
-    "Source Han Serif SC", "Songti SC", "STSong", "Hiragino Mincho ProN",
-    /* Windows 衬线字体 */
     'Courier New', Courier, monospace,
-    
-    "SimSun", "NSimSun", "FangSong", "Microsoft YaHei UI", 
-    /* 兜底方案 */
     serif;
     line-height: 1.7;
     background-color: #fff;
@@ -37,17 +25,10 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
-.code {
-  font-family: Menlo, Consolas, Courier, 'Han Heiti', monospace, monospace,
-    sans-serif;
-}
 .sans-serif {
   font-family: 'Romanization Sans', 'Helvetica Neue', Helvetica, Arial,
     'Han Heiti', sans-serif;
 }
-/* em {
-  background-color: rgba(255, 240, 80, 0.5);
-} */
 pre {
   font-size: 13px;
   background-color: #0f111a;
@@ -57,16 +38,20 @@ pre {
 pre,
 code {
   color: #62bd96;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+
 }
 code {
   padding: 0 0.25em;
 }
 blockquote {
-  /* border-left: 3px solid #ccc; */
-  /* padding-left: 0.25em; */
-  /* border-radius: 6px; */
   position: relative;
   margin-left: 3em;
+  font-size: 16px;
+  padding: 6px;
+  color: #000;
+  font-weight: bold;
 }
 blockquote::before {
   content: '\201C';
