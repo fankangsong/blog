@@ -43,12 +43,12 @@ const AboutPage = () => {
 
         <p>
           我是
-          Colin，来自深圳的80后程序员，中年三明治。在这里分享随笔和摄影。我的爱好广泛：弹吉他
-          、<Link to="/photography">摄影</Link>。喜欢的运动：游泳、
+          Colin，来自深圳的80后程序员，中年三明治。在这里分享随笔和摄影。我的爱好弹吉他
+          、<Link to="/photography">摄影</Link>。喜欢的运动：
           <a href="/running" target="_blank">
             跑步
           </a>
-          、徒步、滑板、骑行。最近在更新<a href="https://www.xiaohongshu.com/user/profile/6534b2ce00000000060047f4" target="_blank">📕小红书</a>
+          、徒步、引体向上。我的<a href="https://www.xiaohongshu.com/user/profile/6534b2ce00000000060047f4" target="_blank">📕小红书</a>、<a href="https://github.com/fankangsong">Github</a>
         </p>
 
         <p>

@@ -10,8 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
-        quality: 90,
+        useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`
       },
     },
     {
