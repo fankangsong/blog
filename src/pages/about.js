@@ -3,6 +3,34 @@ import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import ImageAbout from '../images/about.png'
 
+function echoContact(emailCanvas){
+    const canvas = document.getElementById('emailCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const localPart = 'xxx@';
+    const domainPart = 'gmail.com';
+
+    const fontSize = 20;
+    const fontFamily = '"Courier New", Courier, monospace';
+    ctx.font = `${fontSize}px ${fontFamily}`;
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'left'; // 从左开始绘制
+
+    const xStart = 20;
+    const yCenter = canvas.height / 2;
+
+    // 绘制 "xxx@"
+    ctx.fillStyle = '#333333';
+    ctx.fillText(localPart, xStart, yCenter);
+
+    // 计算 "xxx@" 的宽度，以便紧接着绘制域名
+    const localWidth = ctx.measureText(localPart).width;
+
+    // 绘制 "gmail.com" 使用 Gmail 品牌红
+    ctx.fillStyle = '#EA4335'; // Gmail red (from Google brand)
+    ctx.fillText(domainPart, xStart + localWidth, yCenter);
+}
+
 const AboutPage = () => {
   const [status, setStatus] = useState(0)
   const lastStatus = useRef(status)
@@ -21,21 +49,13 @@ const AboutPage = () => {
       setStatus(2)
     }, 10000)
 
-    var canvas = document.getElementById('contact-me')
-    var ctx = canvas.getContext('2d')
-    ctx.font =
-      '18px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"'
-    ctx.fillText('联系我：', 0, 20)
-    ctx.fillStyle = '#f05037'
-    ctx.fillText('fankangsong@gmail.com', 70, 20)
-
     return () => {
       clearTimeout(timer)
     }
   }, [])
 
   return (
-    <Layout title="作者">
+    <Layout title="我">
       <div className="content design">
         <h3>
           <span>👋</span> 你好!
@@ -49,10 +69,6 @@ const AboutPage = () => {
             跑步
           </a>
           、徒步、引体向上。我的<a href="https://www.xiaohongshu.com/user/profile/6534b2ce00000000060047f4" target="_blank">📕小红书</a>、<a href="https://github.com/fankangsong">Github</a>
-        </p>
-
-        <p>
-          <canvas id="contact-me" width="300" height="30" />
         </p>
 
         <h3>这是我和女儿的自画像</h3>

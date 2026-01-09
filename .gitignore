@@ -80,3 +80,4 @@ content/
 build.sh
 run.sh
 pnpn-*
+*.sh
