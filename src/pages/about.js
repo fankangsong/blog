@@ -3,32 +3,32 @@ import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import ImageAbout from '../images/about.png'
 
-function echoContact(emailCanvas){
-    const canvas = document.getElementById('emailCanvas');
-    const ctx = canvas.getContext('2d');
+function echoContact(emailCanvas) {
+  const canvas = document.getElementById('emailCanvas');
+  const ctx = canvas.getContext('2d');
 
-    const localPart = 'xxx@';
-    const domainPart = 'gmail.com';
+  const localPart = 'xxx@';
+  const domainPart = 'gmail.com';
 
-    const fontSize = 20;
-    const fontFamily = '"Courier New", Courier, monospace';
-    ctx.font = `${fontSize}px ${fontFamily}`;
-    ctx.textBaseline = 'middle';
-    ctx.textAlign = 'left'; // 从左开始绘制
+  const fontSize = 20;
+  const fontFamily = '"Courier New", Courier, monospace';
+  ctx.font = `${fontSize}px ${fontFamily}`;
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'left'; // 从左开始绘制
 
-    const xStart = 20;
-    const yCenter = canvas.height / 2;
+  const xStart = 20;
+  const yCenter = canvas.height / 2;
 
-    // 绘制 "xxx@"
-    ctx.fillStyle = '#333333';
-    ctx.fillText(localPart, xStart, yCenter);
+  // 绘制 "xxx@"
+  ctx.fillStyle = '#333333';
+  ctx.fillText(localPart, xStart, yCenter);
 
-    // 计算 "xxx@" 的宽度，以便紧接着绘制域名
-    const localWidth = ctx.measureText(localPart).width;
+  // 计算 "xxx@" 的宽度，以便紧接着绘制域名
+  const localWidth = ctx.measureText(localPart).width;
 
-    // 绘制 "gmail.com" 使用 Gmail 品牌红
-    ctx.fillStyle = '#EA4335'; // Gmail red (from Google brand)
-    ctx.fillText(domainPart, xStart + localWidth, yCenter);
+  // 绘制 "gmail.com" 使用 Gmail 品牌红
+  ctx.fillStyle = '#EA4335'; // Gmail red (from Google brand)
+  ctx.fillText(domainPart, xStart + localWidth, yCenter);
 }
 
 const AboutPage = () => {
@@ -64,7 +64,7 @@ const AboutPage = () => {
         <p>
           我是
           Colin，来自深圳的80后程序员，中年三明治。在这里分享随笔和摄影。我的爱好弹吉他
-          、<Link to="/photography">摄影</Link>。喜欢的运动：
+          、<Link to="/photography/">摄影</Link>。喜欢的运动：
           <a href="/running" target="_blank">
             跑步
           </a>

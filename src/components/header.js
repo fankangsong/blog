@@ -60,7 +60,7 @@ const Header = ({ theme }) => {
           <Link to={`/blog`}>随笔</Link>
         </li>
         <li>
-          <a href="/photos/">摄影</a>
+          <a href="/photography/">摄影</a>
         </li>
         <li>
           <a href="/running/">
