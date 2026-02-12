@@ -4,11 +4,9 @@ import { Link } from 'gatsby'
 import '../styles/home.css'
 
 function IndexPage(props) {
-  const [{ node }] = props.data.allMarkdownRemark.edges
-  const {
-    excerpt,
-    frontmatter: { title, path },
-  } = node
+  const edges = props.data?.allMarkdownRemark?.edges || []
+  const node = edges[0]?.node
+
   return (
     <Layout props={props} title="Hi">
       <div className="content home">
@@ -17,17 +15,23 @@ function IndexPage(props) {
         </div>
         <p className="slogan">这个家伙太懒了，什么都没留下</p>
 
-        <div>
-          <p className="slogan" style={{ transform: 'rotate(4deg)' }}>
-            但是居然更新了一下下
-          </p>
-        </div>
+        {node && (
+          <>
+            <div>
+              <p className="slogan" style={{ transform: 'rotate(4deg)' }}>
+                但是居然更新了一下下
+              </p>
+            </div>
 
-        <div>
-          <p className="go" title={excerpt}>
-            <Link to={path}>👉{title}👈</Link>
-          </p>
-        </div>
+            <div>
+              <p className="go" title={node.excerpt}>
+                <Link to={node.frontmatter.path}>
+                  👉{node.frontmatter.title}👈
+                </Link>
+              </p>
+            </div>
+          </>
+        )}
       </div>
     </Layout>
   )

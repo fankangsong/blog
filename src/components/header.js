@@ -16,7 +16,6 @@ const Header = ({ theme }) => {
     const handleResize = () => {
       const windowWidth = window.innerWidth
 
-      let val = DEFAULT_VAL
       if (windowWidth >= 920) {
         const val = (windowWidth - 800) / 2 - 60
         setFixvalue(val)
